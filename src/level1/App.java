@@ -49,7 +49,6 @@ public class App {
                 System.out.println("오류: 정확한 연산자를 입력하세요");
             }
 
-
             System.out.println("결과: " + result);
 
             System.out.println("계산기 사용을 멈추고 싶다면 'exit'을 정확하게 입력하세요.");
