@@ -10,7 +10,6 @@ public class App {
 
         int result = 0;
         String exit;
-        int temp_result;
         Calculator cal = new Calculator();
 
         // 1. 양의 정수를 입력받기
@@ -29,11 +28,11 @@ public class App {
             }
 
             // 계산기 기능 작동
-            temp_result = cal.calculate(num1, num2, str);
-            System.out.println(temp_result);
+            result = cal.calculate(num1, num2, str);
+            System.out.println(result);
 
             // 연산 결과를 저장하는 부분
-            cal.setResultList(temp_result);
+            cal.setResultList(result);
 
             // 연산 결과를 가져오는 부분
             System.out.println(cal.getResultList());
