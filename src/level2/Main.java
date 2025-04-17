@@ -29,10 +29,14 @@ public class Main {
             }
 
             // 계산기 기능 작동
-            int tmp_result = cal.calculate(num1, num2, str);
+            int temp_result = cal.calculate(num1, num2, str);
+
             // 연산 결과 저장하는 부분
-            cal.list.add(tmp_result);
-            System.out.println(cal.list);
+            cal.setResultList(temp_result);
+
+            // 연산 결과를 가져오는 부분
+            System.out.println(cal.getResultList());
+
 
 
             System.out.println("계산기 사용을 멈추고 싶다면 'exit'을 정확하게 입력하세요.");
