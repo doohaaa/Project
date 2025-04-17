@@ -13,9 +13,10 @@ public class App {
         int result = 0;
         String exit ;
 
-        // 1. 양의 정수를 입력받기
-        // 2. 사칙연산 기호 입력받기
+
         do {
+            // 1. 양의 정수를 입력받기
+            // 2. 사칙연산 기호 입력받기
             System.out.print("첫번째 숫자를 입력하세요: ");
             int num1 = scanner.nextInt();
 
@@ -24,9 +25,6 @@ public class App {
 
             System.out.print("두번째 숫자를 입력하세요: ");
             int num2 = scanner.nextInt();
-            if (num2 == 0) {
-                System.out.println("오류 : 0보다 크거나 같은 정수를 입력하세요.");
-            }
 
 
             // 3. 사칙연산 기호를 사용하여 연산을 진행 한 후 결과를 출력하기
