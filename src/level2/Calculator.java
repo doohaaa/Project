@@ -1,9 +1,11 @@
 package level2;
 
+import java.util.ArrayList;
+
 public class Calculator {
     //1. 속성
     int result;
-    int[] arrResult;
+    ArrayList<Integer> list = new ArrayList<Integer>(5);
 
 
     //2. 생성자
@@ -33,6 +35,8 @@ public class Calculator {
         return result;
 
     }
+
+
 
 
 }
