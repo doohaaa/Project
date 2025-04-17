@@ -20,7 +20,7 @@ public class Calculator {
         } else if (str.equals("-")) {
             result = num1 - num2;
         } else if (str.equals("*")) {
-            int result = num1 * num2;
+            result = num1 * num2;
         } else if (str.equals("/")) {
             if (num2 == 0) {
                 System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
@@ -36,14 +36,19 @@ public class Calculator {
 
     }
 
-
+    // Getter 를 사용한 리스트 접근
     public ArrayList<Integer> getResultList(){
         return this.list;
     }
 
+    // Setter 를 사용한 리스트 수정
     public void setResultList(int result){
         this.list.add(result);
     }
 
+    // 가장 먼저 저장된 데이터 삭제하는 메서드
+    public void deleteResult(){
+        this.list.remove(0);
+    }
 
 }
