@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Calculator {
     //1. 속성
     int result;
-    private ArrayList<Integer> list = new ArrayList<Integer>(5);
+    private ArrayList<Integer> list = new ArrayList<Integer>(100);
 
 
     //2. 생성자
