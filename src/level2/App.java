@@ -32,7 +32,7 @@ public class App {
             temp_result = cal.calculate(num1, num2, str);
             System.out.println(temp_result);
 
-            // 연산 결과 저장하는 부분
+            // 연산 결과를 저장하는 부분
             cal.setResultList(temp_result);
 
             // 연산 결과를 가져오는 부분
