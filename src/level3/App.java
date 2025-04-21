@@ -8,9 +8,9 @@ public class App {
         // 변수 생성 및 초기화
         Scanner scanner = new Scanner(System.in);
 
-        int result = 0;
+        Number result = 0;
         String exit;
-        ArithmeticCalculator cal = new ArithmeticCalculator();
+        ArithmeticCalculator cal = new ArithmeticCalculator(Integer.class);
 
         // 1. 양의 정수를 입력받기
         // 2. 사칙연산 기호 입력받기
@@ -26,6 +26,8 @@ public class App {
             if (num2 == 0) {
                 System.out.println("오류 : 0보다 크거나 같은 정수를 입력하세요.");
             }
+
+
 
             // 계산기 기능 작동
             result = cal.calculate(num1, num2, str);
