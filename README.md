@@ -17,10 +17,10 @@
 - 결과가 저장되어있는 컬렉션을 조회하는 기능이 추가되어 특정 값보다 큰 결과 값을 출력할 수 있다.
 - (목적) enum, 제네릭, 람다, 스트림 활용
 
+<br>
 
 
-
-## 작동 예시
+## ⭐️ 작동 예시
 **Level 1**
 
 <img width="442" alt="image" src="https://github.com/user-attachments/assets/48fb9957-5357-481f-a29a-80f931b22c8b" />
@@ -30,13 +30,13 @@
 
 <img width="435" alt="image" src="https://github.com/user-attachments/assets/6231d7c9-7f56-4bf8-99c7-1bde0ca47566" />
 
+<br>
 
 
-
-## 코드 블럭
+## ⭐️ 코드 블럭 (Java)
 : 사칙 연산을 구현하는 코드
 
-사용언어 : Java
+
 
 ```java
 int calculate(int num1, int num2, String str) {
