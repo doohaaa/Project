@@ -17,8 +17,10 @@
 
 ### 작동 예시
 **Level 1**
+
 <img width="442" alt="image" src="https://github.com/user-attachments/assets/48fb9957-5357-481f-a29a-80f931b22c8b" />
 
 **Level 2**
+
 <img width="435" alt="image" src="https://github.com/user-attachments/assets/6231d7c9-7f56-4bf8-99c7-1bde0ca47566" />
 
