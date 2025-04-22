@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Calculator {
     //1. 속성
-    int result;
+    private int result;
     private ArrayList<Integer> list = new ArrayList<Integer>(100);
 
 
