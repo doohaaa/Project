@@ -31,7 +31,7 @@
 
 ### 코드 블럭
 : 사칙 연산을 구현하는 코드
-₩₩₩ java
+```java
 int calculate(int num1, int num2, String str) {
         if (str.equals("+")) {
             result = num1 + num2;
@@ -53,3 +53,4 @@ int calculate(int num1, int num2, String str) {
         return result;
 
 }
+```
