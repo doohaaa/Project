@@ -27,7 +27,13 @@ public class ArithmeticCalculator<T extends Number> {
 
     //2. 생성자
     public ArithmeticCalculator() {
-        this.converter2 = value -> 0.0;
+        this.converter2 = value -> {
+            if (value instanceof Number) {
+                return ((Number) value).doubleValue();
+            } else {
+                throw new IllegalArgumentException("지원되지 않는 타입입니다: " + value.getClass());
+            }
+        };
     }
 
     //3. 기능 ~ 메서드
@@ -85,19 +91,23 @@ public class ArithmeticCalculator<T extends Number> {
 
 
     public List<T> getBiggerValues(double comp) {
-/*
+
         List<T> filteredList = this.list.stream()
                 .filter(value -> bigger.biggerValue(converter2.apply(value), comp).isPresent())
                 .collect(Collectors.toList());
-*/
+
+        /* converter2 작동 확인 위해 넣은 코드
         List<T> filteredList = this.list.stream()
+
                 .filter(value -> {
-                    Optional<Double> biggerValue = bigger.biggerValue(converter2.apply(value), comp);
-                    System.out.println("Value: " + value + ", biggerValue: " + biggerValue);
-                    return biggerValue.isPresent();
+                    double converted = converter2.apply(value);
+                    System.out.println("Converted: " + converted);
+                    Optional<Double> result = bigger.biggerValue(converted, comp);
+                    System.out.println("Converted: " + converted + ", comp: " + comp + ", result: " + result);
+                    return result.isPresent();
                 })
                 .collect(Collectors.toList());
-
+        */
         this.biggerList.addAll(filteredList);
         System.out.println("filteredList: " + filteredList);
         System.out.println("List: " + list);
