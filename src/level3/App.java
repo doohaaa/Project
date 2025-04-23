@@ -16,22 +16,25 @@ public class App {
         // 2. 사칙연산 기호 입력받기
         do {
             System.out.print("첫번째 숫자를 입력하세요: ");
-            int num1 = scanner.nextInt();
+            double num1 = scanner.nextDouble();
 
             System.out.print("사칙연산 기호를 입력하세요: ");
             String str = scanner.next();
 
             System.out.print("두번째 숫자를 입력하세요: ");
-            int num2 = scanner.nextInt();
+            double num2 = scanner.nextDouble();
             if (num2 == 0) {
                 System.out.println("오류 : 0보다 크거나 같은 정수를 입력하세요.");
             }
+
             //enum 사용
-            OperatorType.fromOperator()
+            OperatorType opType = OperatorType.fromOperator(str);
+            int code = opType.getCode();
+
 
 
             // 계산기 기능 작동
-            result = cal.calculate(num1, num2, OperatorType.ordinal());
+            result = cal.calculate(num1, num2, code);
             System.out.println(result);
 
             // 연산 결과를 저장하는 부분
@@ -52,7 +55,7 @@ public class App {
             // 입력 받은 수 보다 큰 수만 출력
             System.out.print("숫자하나를 입력하세요: ");
             double number= scanner.nextDouble();
-            Stream<Double> list2= ArrayList.stream().map(number > getResultList[i] ? num:null)
+
 
 
             System.out.println("계산기 사용을 멈추고 싶다면 'exit'을 정확하게 입력하세요.");
