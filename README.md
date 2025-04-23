@@ -12,7 +12,7 @@
 - 컬렉션의 가장 먼저 저장된 데이터를 삭제하는 기능이 있다.
 - (목표) 컬렉션, 클래스, 캡슐화 활용
 
-**Level 3 (미완성)**
+**Level 3**
 - 실수를 입력 받을 수 있다.
 - 결과가 저장되어있는 컬렉션을 조회하는 기능이 추가되어 특정 값보다 큰 결과 값을 출력할 수 있다.
 - (목표) enum, 제네릭, 람다, 스트림 활용
@@ -29,6 +29,10 @@
 **Level 2**
 
 <img width="435" alt="image" src="https://github.com/user-attachments/assets/6231d7c9-7f56-4bf8-99c7-1bde0ca47566" />
+
+
+**Level 3**
+<img width="431" alt="image" src="https://github.com/user-attachments/assets/5d40144c-ed92-4ee3-8630-4e1ad93e097a" />
 
 <br>
 <br>
