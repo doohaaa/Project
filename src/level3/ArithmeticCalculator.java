@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class ArithmeticCalculator<T extends Number> {
     //1. 속성
@@ -16,7 +17,7 @@ public class ArithmeticCalculator<T extends Number> {
 
     // 더 큰 요소만 출력
     private List<T> biggerList = new ArrayList<>();
-    BiggerValue bigger = new BiggerValue() {
+    private static BiggerValue bigger = new BiggerValue() {
         @Override
         public Optional<Double> biggerValue(double a, double b) {
             if (a > b) return Optional.of(a);
@@ -25,7 +26,9 @@ public class ArithmeticCalculator<T extends Number> {
     };
 
     //2. 생성자
-
+    public ArithmeticCalculator() {
+        this.converter2 = value -> 0.0;
+    }
 
     //3. 기능 ~ 메서드
 
@@ -79,13 +82,27 @@ public class ArithmeticCalculator<T extends Number> {
     }
 
     // 스캐너로 입력받은 값보다 더 큰값을 출력
+
+
     public List<T> getBiggerValues(double comp) {
-        for (T value : list) {
-            double value2 = this.converter2.apply(value);
-            if (value2 > comp)
-                this.biggerList.add(value);
-        }
+/*
+        List<T> filteredList = this.list.stream()
+                .filter(value -> bigger.biggerValue(converter2.apply(value), comp).isPresent())
+                .collect(Collectors.toList());
+*/
+        List<T> filteredList = this.list.stream()
+                .filter(value -> {
+                    Optional<Double> biggerValue = bigger.biggerValue(converter2.apply(value), comp);
+                    System.out.println("Value: " + value + ", biggerValue: " + biggerValue);
+                    return biggerValue.isPresent();
+                })
+                .collect(Collectors.toList());
+
+        this.biggerList.addAll(filteredList);
+        System.out.println("filteredList: " + filteredList);
+        System.out.println("List: " + list);
         return this.biggerList;
+
     }
 
 

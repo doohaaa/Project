@@ -53,9 +53,9 @@ public class App {
             }
 
             // 입력 받은 수 보다 큰 수만 출력
-            System.out.print("숫자하나를 입력하세요: ");
+            System.out.print("비교하고 싶은 숫자하나를 입력하세요: ");
             double number= scanner.nextDouble();
-
+            cal.getBiggerValues(number);
 
 
             System.out.println("계산기 사용을 멈추고 싶다면 'exit'을 정확하게 입력하세요.");
