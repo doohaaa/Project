@@ -23,9 +23,6 @@ public class App {
 
             System.out.print("두번째 숫자를 입력하세요: ");
             int num2 = scanner.nextInt();
-            if (num2 == 0) {
-                System.out.println("오류 : 0보다 크거나 같은 정수를 입력하세요.");
-            }
 
             // 계산기 기능 작동
             result = cal.calculate(num1, num2, str);
